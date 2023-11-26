@@ -6,3 +6,6 @@ from app.bp_general import bp_general
 def do_home():
     return render_template('general/home.html', title='Home')
 
+
+
+
