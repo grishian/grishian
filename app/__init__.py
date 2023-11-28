@@ -30,8 +30,12 @@ def create_app(config=None):
 
 def do_register_blueprint(flaskapp):
     from app.bp_general import bp_general
+    from app.bp_user import bp_user
+    from app.bp_backlash import bp_backlash
 
     flaskapp.register_blueprint(bp_general)
+    flaskapp.register_blueprint(bp_user)
+    flaskapp.register_blueprint(bp_backlash)
 
 def do_register_error_handlers(flaskapp):
     pass

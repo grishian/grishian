@@ -1,6 +1,6 @@
 import sys
 from app import create_app, db
-from app.bp_general.models import User
+from app.bp_user.model_user import User
 #vergeet hier de blueprints voor de models niet
 
 
