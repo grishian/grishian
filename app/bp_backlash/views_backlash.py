@@ -4,25 +4,17 @@ from app.bp_backlash import bp_backlash
 from app.bp_user.model_user import User
 
 
-@bp_backlash.route('/backlash')
+@bp_backlash.route('/backlash', methods=['GET', 'POST'])
 def do_backlash():
-
-    return render_template('backlash/backlash.html', title='Backlash')
-
-@bp_backlash.route('/calculate_backlash', methods=['GET', 'POST'])
-def do_calculate_backlash():
-
-
 
     if request.method == "POST":
 
-
-
+        #front1 = request.form.get('input_voorkant')
+        
 
         return redirect('https://media.tenor.com/o656qFKDzeUAAAAC/rick-astley-never-gonna-give-you-up.gif')
         
 
-
-    return render_template('backlash/calculate_backlash.html', title='Bereken backlash')
+    return render_template('backlash/backlash.html', title='Backlash')
 
 

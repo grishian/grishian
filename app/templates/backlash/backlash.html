@@ -1,6 +1,60 @@
 {% extends 'index.html' %}
 
 {% block main_content %}
-<img src="../../static/images/backlash/backlash_vage_foto.jpg" class="img-fluid" alt="backlash vage foto">
+
+
+<h1>Backlash</h1>
+
+<form method="post" name="calculate_backlash">
+
+    <div class="container">
+
+        <div class="row my-5">
+            <div class="col-2">
+                <label for="input_voorkant" class="form-label">Voorkant</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="input_voorkant" name="input_voorkant"
+                    aria-describedby="voorkant_help">
+            </div>
+        </div>
+
+
+
+        <div class="row my-5">
+            <div class="col-2">
+            <label for="input_achterkant" class="form-label">Achterkant</label>
+
+            </div>
+            <div class="col">
+            <input type="text" class="form-control" id="input_achterkant" name="input_achterkant"
+                aria-describedby="achterkant_help">
+            </div>
+            <div class="col">
+            <input type="text" class="form-control" id="input_achterkant" name="input_achterkant"
+                aria-describedby="achterkant_help">
+            </div>
+            <div class="col">
+            <input type="text" class="form-control" id="input_achterkant" name="input_achterkant"
+                aria-describedby="achterkant_help">
+            </div>
+            <div class="col">
+            <input type="text" class="form-control" id="input_achterkant" name="input_achterkant"
+                aria-describedby="achterkant_help">
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Bereken</button>
+    </div>
+
+
+
+
+</form>
+
+
+
+
 
 {% endblock %}
