@@ -1,18 +1,18 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from flask_seasurf import SeaSurf
+#from flask_seasurf import SeaSurf
 
 db = SQLAlchemy()
 
 migrate = Migrate()
 
-csrf = SeaSurf()
+#csrf = SeaSurf()
 
 def create_app(config=None):
     app = Flask(__name__)
 
-    csrf.init_app(app)
+    #csrf.init_app(app)
 
     app.debug = True
 

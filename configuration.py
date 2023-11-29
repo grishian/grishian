@@ -5,7 +5,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class BaseConfiguration():
     DEBUG = True
     SECRET_KEY = 'super secret key'
-    SESSION_TYPE = 'memcached'
 
 
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \

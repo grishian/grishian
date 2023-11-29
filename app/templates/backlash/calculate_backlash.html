@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block main_content %}
+
+
+<h1>Backlash</h1>
+
+<form method="post" name="calculate_backlash">
+
+
+    <div class="mb-3">
+        <label for="input_setload" class="form-label">Setload</label>
+        <input type="text" class="form-control" id="input_setload" name="input_setload" aria-describedby="setload_help">
+    </div>
+    <button type="submit" class="btn btn-primary">Bereken</button>
+
+</form>
+
+
+
+
+
+{% endblock %}
