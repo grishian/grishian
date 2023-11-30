@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+
+{% block main_content %}
+
+<div class="container">
+    <h1>Add shimming</h1>
+    <form action="" method="post" name="add_shimming">
+
+        <div class="d-flex">
+            <div>
+                <div class="d-flex flex-row bd-highlight mb-3">
+                    <div class="p-2 bd-highlight">
+                        <label for="pinion" class="form-label">Pinion: </label>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <input type="number" class="form-control" name="pinion_value" id="pinion_value" min="-2" max="2"
+                            step="1">
+                    </div>
+                </div>
+                <div class="d-flex flex-row bd-highlight mb-3">
+                    <div class="p-2 bd-highlight">
+                        <label for="backlash" class="form-label">Backlash: </label>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <input type="number" class="form-control" name="backlash_value" id="backlash_value" min="-20"
+                            max="20" step="4">
+                    </div>
+                </div>
+                <div class="d-flex flex-row bd-highlight mb-3">
+                    <div class="p-2 bd-highlight">
+                        <label for="shim_left" class="form-label">Shim Left: </label>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <input type="number" class="form-control" name="shim_left" id="shim_left" min="-35" max="35"
+                            step="5">
+                    </div>
+                </div>
+                <div class="d-flex flex-row bd-highlight mb-3">
+                    <div class="p-2 bd-highlight">
+                        <label for="shim_right" class="form-label">Shim Right: </label>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <input type="number" class="form-control" name="shim_right" id="shim_right" min="-35" max="35"
+                            step="5">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+                <div class="d-flex">
+                    <div>
+                
+                        {% for shim in shims %}
+
+                            id: {{shim.id}}; pinion: {{shim.pinion_value}}; backlashvalue: {{shim.backlash_value}}; shim_left:
+                            {{shim.shim_left}}; shim_right: {{shim.shim_right}}<br>
+
+                        {% endfor %}
+                    </div>
+                </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="background-color: #A44200; border: 0; ">Create</button>
+
+    </form>
+</div>
+
+{% endblock %}
