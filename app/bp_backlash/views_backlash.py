@@ -25,10 +25,18 @@ def do_backlash():
 
         print('meting: ', pinion_1, 'load: ', pinion)
 
-        return redirect(url_for('bp_backlash.do_backlash'))
+        return render_template('backlash/backlash_solution.html', meting=pinion_1, load=pinion)
         
 
     return render_template('backlash/backlash.html', title='Backlash')
+
+@bp_backlash.route('/backlash_solution', methods=['GET', 'POST'])
+def do_backlash_solution():
+
+    pass
+
+    #return render_template('backlash/backlash.html', title='Backlash')
+
 
 
 @bp_backlash.route('/add_shimming', methods=['GET', 'POST'])
