@@ -9,10 +9,23 @@ def do_backlash():
 
     if request.method == "POST":
 
-        #front1 = request.form.get('input_voorkant')
-        
+        pinion_1 = request.form.get('input_voorkant')
+        backlash_1 = request.form.get('input_achterkant1')
+        backlash_2 = request.form.get('input_achterkant2')
+        backlash_3 = request.form.get('input_achterkant3')
+        backlash_4 = request.form.get('input_achterkant4')
 
-        return redirect('https://media.tenor.com/o656qFKDzeUAAAAC/rick-astley-never-gonna-give-you-up.gif')
+        pinion_abs_1 = abs(4.5-float(pinion_1))
+        pinion_abs_2 = abs(2.6-float(pinion_1))
+
+        if pinion_abs_1 <= pinion_abs_2:
+            pinion = 4.5-float(pinion_1)
+        else:
+            pinion = 2.6-float(pinion_1)
+
+        print('meting: ', pinion_1, 'load: ', pinion)
+
+        return redirect(url_for('bp_backlash.do_backlash'))
         
 
     return render_template('backlash/backlash.html', title='Backlash')
