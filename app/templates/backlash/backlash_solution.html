@@ -3,10 +3,17 @@
 {% block main_content %}
 
 
-<h1>Backlash uitkomst:</h1>
+<h1>Backlash uitkomst</h1>
 
+<h2>Voorkant/ Pinion</h2>
 <p>De meting was: {{meting}}</p>
 <p>De load is: {{load}}</p>
+
+<h2>Achterkant/ Backlash(development)</h2>
+<p>De backlash metingen waren: {{backlash_values}}</p>
+<p>Dit zijn goede waardes: {{good_values}}</p>
+<p>Dit zijn bijna goede waardes: {{medium_values}}</p>
+<p>Dit zijn slechte waardes: {{bad_values}}</p>
 
 
 {% endblock %}
