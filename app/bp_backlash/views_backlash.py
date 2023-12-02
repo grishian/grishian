@@ -41,10 +41,8 @@ def do_backlash():
                             
 
                     except Exception as e:  # pragma: no cover
-                        # if this fails we do not care, but we certainly do not want to block
-                        # someone logging in
-                        return render_template('error_pages.default_error_page.html')
 
+                        return render_template('error_pages.default_error_page.html')
 
             for backlash_value in backlash_values:
                 for backlash_good_value in backlash_good_values:
@@ -56,9 +54,8 @@ def do_backlash():
                             
 
                     except Exception as e:  # pragma: no cover
-                        # if this fails we do not care, but we certainly do not want to block
-                        # someone logging in
-                        print('Error: {}'.format(e))
+
+                        return render_template('error_pages.default_error_page.html')
 
             for backlash_value in backlash_values:
                 for backlash_medium_value in backlash_medium_values:
@@ -70,20 +67,21 @@ def do_backlash():
 
 
                     except Exception as e:  # pragma: no cover
-                        # if this fails we do not care, but we certainly do not want to block
-                        # someone logging in
-                        print('Error: {}'.format(e))
+
+                        return render_template('error_pages.default_error_page.html')
 
             
-                        
-            '''print('good values:', good_values)
-            print('medium values:', medium_values)
-            print('bad values:', bad_values)
-            print('backlashvalues', backlash_values)
-            print('meting: ', pinion_1, 'load: ', pinion)'''
+            solution_backlash = ':) Goed genoeg.'
+
+            if (len(medium_values) > 1) or (len(bad_values) > 0):
+                solution_backlash = 'Oei, niet goed genoeg.'
+
+            
+
 
             return render_template('backlash/backlash_solution.html', meting=pinion_1, load=round(pinion),
-                                backlash_values=backlash_values, good_values=good_values, medium_values=medium_values, bad_values=bad_values)
+                                backlash_values=backlash_values, good_values=good_values, medium_values=medium_values, bad_values=bad_values,
+                                solution_backlash=solution_backlash)
                         
 
         except Exception as e:  # pragma: no cover
