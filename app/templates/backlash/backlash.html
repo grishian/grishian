@@ -2,48 +2,67 @@
 
 {% block main_content %}
 
-
-<h1>Backlash</h1>
+<h1>Backlashmetingen</h1>
 
 <form method="post" name="calculate_backlash">
-
-    <div class="container">
-
-        <div class="row my-5">
-            <div class="col-2">
-                <label for="input_voorkant" class="form-label">Voorkant</label>
-            </div>
-            <div class="col">
-                <input type="number" class="form-control" id="input_voorkant" name="input_voorkant"
-                    >
-            </div>
-        </div>
-
-
-
-        <div class="row my-5">
-            <div class="col-2">
-            <label for="input_achterkant" class="form-label">Achterkant</label>
-
-            </div>
-            <div class="col">
-            <input type="number" class="form-control" id="input_achterkant1" name="input_achterkant1"
-                >
-            </div>
-            <div class="col">
-            <input type="number" class="form-control" id="input_achterkant2" name="input_achterkant2"
-                >
-            </div>
-            <div class="col">
-            <input type="number" class="form-control" id="input_achterkant3" name="input_achterkant3"
-                >
-            </div>
-            <div class="col">
-            <input type="number" class="form-control" id="input_achterkant4" name="input_achterkant4"
-                >
+<div class="container">
+    
+    <div class="row my-5">
+        <div class="col my-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Voorkant
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <span class="input-group-text">1</span>
+                            <input type="number" class="form-control" id="input_voorkant" name="input_voorkant">                        
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
+        <div class="col my-3">
 
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Achterkant
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <span class="input-group-text">1</span>
+                            <input type="number" class="form-control" id="input_achterkant1" name="input_achterkant1">                                       
+                        </div>
+
+                    </li>
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <span class="input-group-text">2</span>
+                            <input type="number" class="form-control" id="input_achterkant2" name="input_achterkant2">
+                                       
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <span class="input-group-text">3</span>
+                            <input type="number" class="form-control" id="input_achterkant3" name="input_achterkant3">
+                                       
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <span class="input-group-text">4</span>
+                            <input type="number" class="form-control" id="input_achterkant4" name="input_achterkant4">
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
         <button type="submit" class="btn btn-primary">Bereken</button>
     </div>
