@@ -11,10 +11,10 @@ def do_backlash():
 
         try:
             pinion_1 = request.form.get('input_voorkant')
-            backlash_1 = request.form.get('input_achterkant1')
-            backlash_2 = request.form.get('input_achterkant2')
-            backlash_3 = request.form.get('input_achterkant3')
-            backlash_4 = request.form.get('input_achterkant4')
+            backlash_1 = int(request.form.get('input_achterkant1'))
+            backlash_2 = int(request.form.get('input_achterkant2'))
+            backlash_3 = int(request.form.get('input_achterkant3'))
+            backlash_4 = int(request.form.get('input_achterkant4'))
 
                 
             pinion_abs_1 = abs(4.5-float(pinion_1))
@@ -33,6 +33,7 @@ def do_backlash():
             good_values = []
             medium_values = []
             bad_values = []
+            backlash_load_values = []
 
             for backlash_value in backlash_values:
                 if 35 < int(backlash_value) or int(backlash_value) < 20:
@@ -70,13 +71,24 @@ def do_backlash():
 
                         return render_template('error_pages.default_error_page.html')
 
+
+            medium_values = list(map(int, medium_values))
             
             solution_backlash = ':) Goed genoeg.'
 
             if (len(medium_values) > 1) or (len(bad_values) > 0):
                 solution_backlash = 'Oei, niet goed genoeg.'
 
-            
+                if len(medium_values) > 1:
+
+                    for medium_value in medium_values:
+                        from_medium_value_to_29 = abs(medium_value - 29)
+                        backlash_load_values.append(from_medium_value_to_29)
+                        
+
+                    #mean_medium_values = sum(medium_values)/len(medium_values)
+            print('backlashloadvalues', backlash_load_values)
+
 
 
             return render_template('backlash/backlash_solution.html', meting=pinion_1, load=round(pinion),

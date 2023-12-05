@@ -5,18 +5,38 @@
 
 <h1>Backlash uitkomst</h1>
 
-<h2>Voorkant/ Pinion</h2>
-<p>De meting was: {{meting}}</p>
-<p>De load is: {{load}}</p>
+<div class="container">
 
-<h2>Achterkant/ Backlash(development)</h2>
-<p>De backlash metingen waren: {{backlash_values}}</p>
-<p>Dit zijn goede waardes: {{good_values}}</p>
-<p>Dit zijn bijna goede waardes: {{medium_values}}</p>
-<p>Dit zijn slechte waardes: {{bad_values}}</p>
+    <div class="row my-5">
+        <div class="col my-3">
+            <div class="card" style="width: 20rem;">
+                <div class="card-header">
+                    Voorkant
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Meting = {{meting}}</li>
+                    <li class="list-group-item">Load = {{load}}</li>
+                </ul>
+            </div>
 
-<h3>Ofwel moeten de 4 waardes goed zijn. Ofwel moeten er 3 goede en 1 bijna goede waardes zijn.</h3>
-<p>Meer als 1 bijna goede waarde of meer als 0 slechte waardes? Goed of slecht?: {{solution_backlash}}</p>
+        </div>
+        <div class="col my-3">
+            <div class="card" style="width: 20rem;">
+                <div class="card-header">
+                    Achterkant(voorlopig)
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Meting = {{backlash_values}}</li>
+                    <li class="list-group-item">Goede waardes = {{good_values}}</li>
+                    <li class="list-group-item">Bijna goede waardes = {{medium_values}}</li>
+                    <li class="list-group-item">Slechte waardes = {{bad_values}}</li>
+                    <li class="list-group-item">Conclusie = {{solution_backlash}}</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}
