@@ -7,8 +7,8 @@ class BaseConfiguration():
     SECRET_KEY = 'super secret key'
 
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-    'sqlite:///' + os.path.join(basedir, 'app.db')
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+    # 'sqlite:///' + os.path.join(basedir, 'app.db')
 
     DEBUG_TB_ENABLED = True
     DEBUG_TB_INTERCEPT_REDIRECTS = False
