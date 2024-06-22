@@ -1,4 +1,6 @@
-from flask import render_template
+from flask import Flask, render_template, request, g
+import sqlite3
+
 from app.bp_general import bp_general
 from app.bp_user.model_user import User
 
@@ -7,6 +9,9 @@ from app.bp_user.model_user import User
 def do_home():
 
     return render_template('general/home.html', title='Home')
+
+
+
 
 
 
